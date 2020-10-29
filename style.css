@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+}
+
+.row button {
+    display: block;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    font-size: 64px;
+}
