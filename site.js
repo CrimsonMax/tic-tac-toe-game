@@ -25,45 +25,56 @@ $('.row button').on('click', event => {
     let sec9 = document.getElementById('8');
 
     function finish() {
+        
+        const xWin = () => {
+            alert('"X" WIN !');
+            location.reload();
+        }
+        
+        const oWin = () => {
+            alert('"O" WIN !');
+            location.reload();
+        }
+
         if (sec1.innerText == 'X' && sec2.innerText == 'X' && sec3.innerText == 'X') {
-            return alert('X WIN!');
+            return xWin();
         } else if (sec1.innerText == 'O' && sec2.innerText == 'O' && sec3.innerText == 'O') {
-            return alert('O WIN!');
+            return oWin();
         }
         if (sec4.innerText == 'X' && sec5.innerText == 'X' && sec6.innerText == 'X') {
-            return alert('X WIN!');
+            return xWin();
         } else if (sec4.innerText == 'O' && sec5.innerText == 'O' && sec6.innerText == 'O') {
-            return alert('O WIN!');
+            return oWin();
         }
         if (sec7.innerText == 'X' && sec8.innerText == 'X' && sec9.innerText == 'X') {
-            return alert('X WIN!');
+            return xWin();
         } else if (sec7.innerText == 'O' && sec8.innerText == 'O' && sec9.innerText == 'O') {
-            return alert('O WIN!');
+            return oWin();
         }
         if (sec1.innerText == 'X' && sec4.innerText == 'X' && sec7.innerText == 'X') {
-            return alert('X WIN!');
+            return xWin();
         } else if (sec1.innerText == 'O' && sec4.innerText == 'O' && sec7.innerText == 'O') {
-            return alert('O WIN!');
+            return oWin();
         }
         if (sec2.innerText == 'X' && sec5.innerText == 'X' && sec8.innerText == 'X') {
-            return alert('X WIN!');
+            return xWin();
         } else if (sec2.innerText == 'O' && sec5.innerText == 'O' && sec8.innerText == 'O') {
-            return alert('O WIN!');
+            return oWin();
         }
         if (sec3.innerText == 'X' && sec6.innerText == 'X' && sec9.innerText == 'X') {
-            return alert('X WIN!');
+            return xWin();
         } else if (sec3.innerText == 'O' && sec6.innerText == 'O' && sec9.innerText == 'O') {
-            return alert('O WIN!');
+            return oWin();
         }
         if (sec5.innerText == 'X' && sec1.innerText == 'X' && sec9.innerText == 'X') {
-            return alert('X WIN!');
+            return xWin();
         } else if (sec5.innerText == 'O' && sec1.innerText == 'O' && sec9.innerText == 'O') {
-            return alert('O WIN!');
+            return oWin();
         }
         if (sec5.innerText == 'X' && sec3.innerText == 'X' && sec7.innerText == 'X') {
-            return alert('X WIN!');
+            return xWin();
         } else if (sec5.innerText == 'O' && sec3.innerText == 'O' && sec7.innerText == 'O') {
-            return alert('O WIN!');
+            return oWin();
         }
     }
 
