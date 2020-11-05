@@ -25,14 +25,19 @@ $('.row button').on('click', event => {
     let sec9 = document.getElementById('8');
 
     function finish() {
-        
+
         const xWin = () => {
             alert('"X" WIN !');
             location.reload();
         }
-        
+
         const oWin = () => {
             alert('"O" WIN !');
+            location.reload();
+        }
+
+        const draw = () => {
+            alert('DRAW !');
             location.reload();
         }
 
@@ -75,6 +80,18 @@ $('.row button').on('click', event => {
             return xWin();
         } else if (sec5.innerText == 'O' && sec3.innerText == 'O' && sec7.innerText == 'O') {
             return oWin();
+        }
+
+        if (sec1.innerText
+            && sec2.innerText
+            && sec3.innerText
+            && sec4.innerText
+            && sec5.innerText
+            && sec6.innerText
+            && sec7.innerText
+            && sec8.innerText
+            && sec9.innerText) {
+            return draw();
         }
     }
 
