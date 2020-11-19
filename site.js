@@ -4,7 +4,9 @@ let gameField = [
     [null, null, null],
 ]
 
-$('.row button').on('click', event => {
+const game = document.querySelectorAll('button')
+
+game.forEach(el => el.addEventListener('click', event => {
     let x = event.target.dataset.btn;
     let y = event.target.parentElement.dataset.row;
 
@@ -95,9 +97,11 @@ $('.row button').on('click', event => {
         }
     }
 
-    $(`[data-row="${y}"] [data-btn="${x}"]`).text(gameField[x][y]);
+    const mark = document.querySelector(`[data-row='${y}'] [data-btn='${x}']`)
+
+    mark.innerHTML = gameField[x][y]
     finish();
-});
+}))
 
 function getCount() {
     counter = 0;
