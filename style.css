@@ -12,6 +12,12 @@
     height: 100vh;
 }
 
+/* .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
 .row {
     display: flex;
 }
@@ -22,4 +28,42 @@
     height: 90px;
     text-align: center;
     font-size: 64px;
+}
+
+.count {
+    margin: 10px;
+}
+
+.tablecell {
+    display: table;
+}
+
+.tablecell > * {
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    font-size: 64px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.xcount {
+    border: 1px solid grey;
+}
+
+.ycount {
+    border: 1px solid grey;
+}
+
+.btnr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.reset {
+    height: 30px;
+    width: 60px;
+    font-weight: bold;
 }

@@ -4,7 +4,21 @@ let gameField = [
     [null, null, null],
 ]
 
+let ynum = document.querySelector('.ycount')
+let xnum = document.querySelector('.xcount')
+
+xnum.innerText = localStorage.getItem('x') || 0
+ynum.innerText = localStorage.getItem('y') || 0
+
 const game = document.querySelectorAll('button')
+
+const reset = document.querySelector('.reset')
+
+reset.addEventListener('click', () => {
+    xnum.innerText = 0
+    ynum.innerText = 0
+    localStorage.clear()
+})
 
 game.forEach(el => el.addEventListener('click', event => {
     let x = event.target.dataset.btn;
@@ -29,11 +43,15 @@ game.forEach(el => el.addEventListener('click', event => {
     function finish() {
 
         const xWin = () => {
+            xnum.innerText++
+            localStorage.setItem('x', xnum.innerText)
             alert('"X" WIN !');
             location.reload();
         }
 
         const oWin = () => {
+            ynum.innerText++
+            localStorage.setItem('y', ynum.innerText)
             alert('"O" WIN !');
             location.reload();
         }
